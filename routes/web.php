@@ -14,3 +14,4 @@ Route::get('/contactus', [ContactUsController::class, 'index']);
 Route::get('/tim', [TimController::class, 'index']);
 
 Route::get('/masuk', [MasukController::class, 'index']);
+

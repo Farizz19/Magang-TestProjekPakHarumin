@@ -1,66 +1,141 @@
 @extends('layout.layout')
 
 @section('content')
-<div class="page-header align-items-start min-vh-100" style="background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');" loading="lazy">
-  <span class="mask bg-gradient-dark opacity-6"></span>
-  <div class="container my-auto">
-    <div class="row">
-      <div class="col-lg-4 col-md-8 col-12 mx-auto">
-        <div class="card z-index-0 fadeIn3 fadeInBottom">
-          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-            <div class="bg-dark shadow border-radius-lg py-3 pe-1">
-              <h4 class="text-white font-weight-bolder text-center mt-5">Masuk</h4>
-              <div class="row mt-3">
-                <div class="col-2 text-center ms-auto">
-                  <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-facebook text-white text-lg"></i>
-                  </a>
-                </div>
-                <div class="col-2 text-center px-1">
-                  <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-github text-white text-lg"></i>
-                  </a>
-                </div>
-                <div class="col-2 text-center me-auto">
-                  <a class="btn btn-link px-3" href="javascript:;">
-                    <i class="fa fa-google text-white text-lg"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card-body">
-            <form role="form" class="text-start">
-              <div class="input-group input-group-outline my-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control">
-              </div>
-              <div class="input-group input-group-outline mb-3">
-                <label class="form-label">Password</label>
-                <input type="password" class="form-control">
-              </div>
-              <div class="text-center">
-                <!-- <button type="button" class="btn bg-gradient-primary w-100 my-4 mb-2">Sign in</button> -->
-                <a href="/" class="btn btn-success w-100">Masuk</a>
-              </div>
-              <p class="mt-4 text-sm text-center">
-                Lorem ipsum dolor sit?
-              </p>
-            </form>
-          </div>
+
+<!-- -------- START HEADER 7 w/ text and video ------- -->
+<header class="bg-gradient-dark">
+  <div class="page-header min-vh-70" style="background-image: url('https://i.ibb.co/qkXJCWM/pcr.jpg'); background-size: cover;">
+    <span class="mask bg-gradient-dark opacity-6"></span>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center mx-auto my-auto">
+          <h1 class="text-white">Selamat Datang</h1>
+          <p class="lead mb-4 text-white opacity-8">Laboratorium Computer Networking</p>
         </div>
       </div>
     </div>
   </div>
- 
+</header>
+<!-- -------- END HEADER 7 w/ text and video ------- -->
+<div class="card p-5" style="justify-content: center;">
+  <section>
+    <div>
+      <form action="" style="background-color: transparent; margin: auto;" class="w-40 shadow">
+        <table class="table">
+          <tr class="form-group">
+            <td class="form-control">Nomor</td>
+            <td>:</td>
+            <td class=""><input class="form-control" type="text"></td>
+          </tr>
+          <tr class="form-group">
+            <td class="form-control">Password</td>
+            <td>:</td>
+            <td class=""><input class="form-control" type="password"></td>
+          </tr>
+          <tr class="form-group">
+            <td class="shadow"><input type="submit" value="Masuk" class="btn btn-success" name="" id=""></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </section>
+  <!-- -------- END PRE-FOOTER 1 w/ SUBSCRIBE BUTTON AND IMAGE ------- -->
 </div>
+
 <!--   Core JS Files   -->
-<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
-<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
-<script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="{{asset('assets/js/core/popper.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/js/plugins/perfect-scrollbar.min.js')}}"></script>
+<!--  Plugin for TypedJS, full documentation here: https://github.com/inorganik/CountUp.js -->
+<script src="{{asset('assets/js/plugins/countup.min.js')}}"></script>
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
-<script src="../assets/js/material-kit.min.js?v=3.0.4" type="text/javascript"></script>
+<script src="{{asset('assets/js/material-kit.min.js?v=3.0.4')}}" type="text/javascript"></script>
+<script>
+  // get the element to animate
+  var element = document.getElementById('count-stats');
+  var elementHeight = element.clientHeight;
+
+  // listen for scroll event and call animate function
+
+  document.addEventListener('scroll', animate);
+
+  // check if element is in view
+  function inView() {
+    // get window height
+    var windowHeight = window.innerHeight;
+    // get number of pixels that the document is scrolled
+    var scrollY = window.scrollY || window.pageYOffset;
+    // get current scroll position (distance from the top of the page to the bottom of the current viewport)
+    var scrollPosition = scrollY + windowHeight;
+    // get element position (distance from the top of the page to the bottom of the element)
+    var elementPosition = element.getBoundingClientRect().top + scrollY + elementHeight;
+
+    // is scroll position greater than element position? (is element in view?)
+    if (scrollPosition > elementPosition) {
+      return true;
+    }
+
+    return false;
+  }
+
+  var animateComplete = true;
+  // animate element when it is in view
+  function animate() {
+
+    // is element in view?
+    if (inView()) {
+      if (animateComplete) {
+        if (document.getElementById('state1')) {
+          const countUp = new CountUp('state1', document.getElementById("state1").getAttribute("countTo"));
+          if (!countUp.error) {
+            countUp.start();
+          } else {
+            console.error(countUp.error);
+          }
+        }
+        if (document.getElementById('state2')) {
+          const countUp1 = new CountUp('state2', document.getElementById("state2").getAttribute("countTo"));
+          if (!countUp1.error) {
+            countUp1.start();
+          } else {
+            console.error(countUp1.error);
+          }
+        }
+        if (document.getElementById('state3')) {
+          const countUp2 = new CountUp('state3', document.getElementById("state3").getAttribute("countTo"));
+          if (!countUp2.error) {
+            countUp2.start();
+          } else {
+            console.error(countUp2.error);
+          };
+        }
+        animateComplete = false;
+      }
+    }
+  }
+
+  if (document.getElementById('typed')) {
+    var typed = new Typed("#typed", {
+      stringsElement: '#typed-strings',
+      typeSpeed: 90,
+      backSpeed: 90,
+      backDelay: 200,
+      startDelay: 500,
+      loop: true
+    });
+  }
+</script>
+<script>
+  if (document.getElementsByClassName('page-header')) {
+    window.onscroll = debounce(function() {
+      var scrollPosition = window.pageYOffset;
+      var bgParallax = document.querySelector('.page-header');
+      var oVal = (window.scrollY / 3);
+      bgParallax.style.transform = 'translate3d(0,' + oVal + 'px,0)';
+    }, 6);
+  }
+</script>
 
 @endsection
