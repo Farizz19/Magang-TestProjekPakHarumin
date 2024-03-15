@@ -112,7 +112,7 @@
             </div>
             <div class="col-lg-8 col-md-6 col-12 my-auto">
               <div class="card-body ps-lg-0">
-                <h5 class="mb-0">Nama</h5>
+                <h5 class="mb-0">Harumin, S.S.T</h5>
                 <h6 class="text-info">Jabatan</h6>
                 <p class="mb-0">Deskripsi</p>
               </div>
