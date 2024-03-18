@@ -20,21 +20,22 @@
 <div class="card p-5" style="width: 900px; margin: auto;">
   <section>
     <div>
-      <form action="" style="background-color: transparent; margin: auto; padding: 30px;" class="w-60 rounded">
+      <form action="/prosesmasuk" method="post" style="background-color: transparent; margin: auto; padding: 30px;" class="w-60 rounded">
         <table class="table rounded">
+          @csrf
           <tr class="form-group">
-            <td class="text-dark text-bold">Nomor</td>
+            <td class="text-dark text-bold">Username</td>
             <td>:</td>
-            <td class=""><input style="border: 1px solid black" class="form-control" type="text"></td>
+            <td class=""><input name="username" placeholder="Masukkan Nama Anda" style="border: 1px solid black" class="form-control" type="text"></td>
           </tr>
           <tr class="form-group">
             <td class="text-dark text-bold">Password</td>
             <td>:</td>
-            <td class=""><input style="border: 1px solid black" class="form-control" type="password"></td>
+            <td class=""><input name="password" placeholder="Masukkan Password" style="border: 1px solid black" class="form-control" type="password"></td>
           </tr>
         </table>
-        <button type="submit" value="Daftar" class="btn btn-primary" style="float: left;" name="" id=""><a href="/beranda" class="text-light text-bold">Daftar</a></button>
-        <button type="submit" value="Masuk" class="btn btn-success" style="float: right;" name="" id=""><a href="/beranda" class="text-light text-bold">Masuk</a></button>
+        <button type="submit" value="Daftar" class="btn btn-primary" style="float: left;" name="" id=""><a class="text-light text-bold" href="/daftar">Daftar</a></button>
+        <input type="submit" value="Masuk" class="btn btn-success" style="float: right;" name="" id="">
       </form>
     </div>
   </section>

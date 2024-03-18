@@ -66,7 +66,7 @@
                                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                                     Akun
                                 </h6>
-                                <a href="/masuk" class="dropdown-item border-radius-md">
+                                <a href="/" class="dropdown-item border-radius-md">
                                     <span>Masuk</span>
                                 </a>
                             </div>
@@ -75,7 +75,7 @@
                                     Halaman Lainnya
                                 </h6>
                                 <a href="/" class="dropdown-item border-radius-md">
-                                    <span>Tentang Kami</span>
+                                    <span>Tentang Kami</span>   
                                 </a>
                                 <!-- <a href="/contactus" class="dropdown-item border-radius-md">
                                     <span>Kontak Kami</span>
@@ -86,7 +86,7 @@
                                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1 mt-3">
                                     Akun
                                 </h6>
-                                <a href="/masuk" class="dropdown-item border-radius-md">
+                                <a href="/" class="dropdown-item border-radius-md">
                                     <span>Masuk</span>
                                 </a>
                             </div>
