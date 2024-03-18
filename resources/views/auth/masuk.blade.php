@@ -17,25 +17,24 @@
   </div>
 </header>
 <!-- -------- END HEADER 7 w/ text and video ------- -->
-<div class="card p-5" style="justify-content: center;">
+<div class="card p-5" style="width: 900px; margin: auto;">
   <section>
     <div>
-      <form action="" style="background-color: transparent; margin: auto;" class="w-40 shadow">
-        <table class="table">
+      <form action="" style="background-color: transparent; margin: auto; padding: 30px;" class="w-60 rounded">
+        <table class="table rounded">
           <tr class="form-group">
-            <td class="form-control">Nomor</td>
+            <td class="text-dark text-bold">Nomor</td>
             <td>:</td>
-            <td class=""><input class="form-control" type="text"></td>
+            <td class=""><input style="border: 1px solid black" class="form-control" type="text"></td>
           </tr>
           <tr class="form-group">
-            <td class="form-control">Password</td>
+            <td class="text-dark text-bold">Password</td>
             <td>:</td>
-            <td class=""><input class="form-control" type="password"></td>
-          </tr>
-          <tr class="form-group">
-            <td class="shadow"><input type="submit" value="Masuk" class="btn btn-success" name="" id=""></td>
+            <td class=""><input style="border: 1px solid black" class="form-control" type="password"></td>
           </tr>
         </table>
+        <button type="submit" value="Daftar" class="btn btn-primary" style="float: left;" name="" id=""><a href="/beranda" class="text-light text-bold">Daftar</a></button>
+        <button type="submit" value="Masuk" class="btn btn-success" style="float: right;" name="" id=""><a href="/beranda" class="text-light text-bold">Masuk</a></button>
       </form>
     </div>
   </section>

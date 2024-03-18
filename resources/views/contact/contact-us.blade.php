@@ -18,7 +18,7 @@
             </div>
             <div class="card-body">
               <p class="pb-3">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure a, fugiat autem enim sunt. Numquam laborum provident deleniti dicta error accusamus quibusdam asperiores, at voluptatum quo atque totam in!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque iure a, fugiat autem enim sunt. Numquam laborum provident deleniti dicta error accusamus quibusdam asperiores, at voluptatum quo atque totam in!
               </p>
               <form id="contact-form" method="post" autocomplete="off">
                 <div class="card-body p-0 my-3">
