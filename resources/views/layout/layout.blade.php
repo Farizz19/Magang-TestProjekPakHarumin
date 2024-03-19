@@ -1,3 +1,9 @@
+<!-- @if(session('login') == null)
+<script>
+    window.location = '/';
+</script>
+@endif -->
+
 <!DOCTYPE html>
 <html lang="en" itemscope itemtype="http://schema.org/WebPage">
 
@@ -10,19 +16,19 @@
         Laboratorium Computer Networking
     </title>
     <!--     Fonts and icons     -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" /> -->
     <!-- Nucleo Icons -->
     <link href="{{asset('/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
     <link href="{{asset('/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
-    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script> -->
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('assets/css/material-kit.css?v=3.0.4')}}" rel="stylesheet" />
     <!-- Nepcha Analytics (nepcha.com) -->
     <!-- Nepcha is a easy-to-use web analytics. No cookies and fully compliant with GDPR, CCPA and PECR. -->
-    <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script>
+    <!-- <script defer data-site="YOUR_DOMAIN_HERE" src="https://api.nepcha.com/js/nepcha-analytics.js"></script> -->
 </head>
 
 <body class="about-us bg-gray-200">
@@ -69,13 +75,16 @@
                                 <a href="/" class="dropdown-item border-radius-md">
                                     <span>Masuk</span>
                                 </a>
+                                <a href="/keluar" class="dropdown-item border-radius-md">
+                                    <span>Keluar</span>
+                                </a>
                             </div>
                             <div class="d-lg-none">
                                 <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
                                     Halaman Lainnya
                                 </h6>
                                 <a href="/" class="dropdown-item border-radius-md">
-                                    <span>Tentang Kami</span>   
+                                    <span>Tentang Kami</span>
                                 </a>
                                 <!-- <a href="/contactus" class="dropdown-item border-radius-md">
                                     <span>Kontak Kami</span>
@@ -88,6 +97,9 @@
                                 </h6>
                                 <a href="/" class="dropdown-item border-radius-md">
                                     <span>Masuk</span>
+                                </a>
+                                <a href="/keluar" class="dropdown-item border-radius-md">
+                                    <span>Keluar</span>
                                 </a>
                             </div>
                         </div>
@@ -204,12 +216,12 @@
     <script src="{{asset('assets/js/plugins/countup.min.js')}}"></script>
     <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
     <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script> -->
     <script src="{{asset('assets/js/material-kit.min.js?v=3.0.4')}}" type="text/javascript"></script>
     <script>
         // get the element to animate
         var element = document.getElementById('count-stats');
-        var elementHeight = element.clientHeight;
+        //var elementHeight = element.clientHeight;
 
         // listen for scroll event and call animate function
 
@@ -291,6 +303,7 @@
             }, 6);
         }
     </script>
+    @include('sweetalert::alert')
 </body>
 
 </html>

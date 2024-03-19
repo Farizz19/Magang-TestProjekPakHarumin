@@ -36,6 +36,7 @@
         </table>
         <button type="submit" value="Daftar" class="btn btn-primary" style="float: left;" name="" id=""><a class="text-light text-bold" href="/daftar">Daftar</a></button>
         <input type="submit" value="Masuk" class="btn btn-success" style="float: right;" name="" id="">
+        <hr>
       </form>
     </div>
   </section>
@@ -50,12 +51,12 @@
 <script src="{{asset('assets/js/plugins/countup.min.js')}}"></script>
 <!-- Control Center for Material UI Kit: parallax effects, scripts for the example pages etc -->
 <!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script> -->
 <script src="{{asset('assets/js/material-kit.min.js?v=3.0.4')}}" type="text/javascript"></script>
 <script>
   // get the element to animate
   var element = document.getElementById('count-stats');
-  var elementHeight = element.clientHeight;
+  //var elementHeight = element.clientHeight;
 
   // listen for scroll event and call animate function
 

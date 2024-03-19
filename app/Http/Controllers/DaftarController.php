@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\DataPenggunaModel;
 use Illuminate\Support\Facades\Hash;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DaftarController extends Controller
 {
@@ -26,7 +27,7 @@ class DaftarController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        // Alert::success('Sukses', 'Data Berhasil Ditambah');
+        Alert::success('Sukses', 'Data Berhasil Ditambah');
         return redirect('/');
     }
 }
